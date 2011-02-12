@@ -1,0 +1,3 @@
+Problem:
+There are situations when multiple clients need to write into the same queue. The reason they can't have separate queues is that we want to process the messages in the order in which they are enqueued, so as not to pessimize any of them.
+However, the clients that are enqueuing sometimes need to know only about their view of the queue, so that they can do things like dropping packets if their quota on the central queue is full. We may also want to iterate over elements in the Queue which belong to a certain queue. 
