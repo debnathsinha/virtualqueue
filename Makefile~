@@ -1,0 +1,9 @@
+OBJS = test
+
+all: $(OBJS)
+
+%.o: %.cpp
+	gcc -o $@ $<
+
+clean:
+	rm -f $(OBJS)
